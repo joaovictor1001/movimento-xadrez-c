@@ -46,36 +46,29 @@ int main() {
         contadorRainha++;
     } while(contadorRainha < casasRainha);
 
-    return 0;
-}
+    printf("\n");
 
-// =============================
-// Movimento do Cavalo
-// =============================
+    // =============================
+    // CAVALO - usando loops aninhados
+    // =============================
 
-// O cavalo se move 2 casas para baixo e 1 para a esquerda (formato em L)
+    int casasBaixo = 2;
+    int casasEsquerda = 1;
 
-int casasBaixo = 2;
-int casasEsquerda = 1;
+    printf("Movimento do Cavalo:\n");
 
-printf("\n"); // Linha em branco para separar das outras peças
+    for(int i = 0; i < casasBaixo; i++) {
+        printf("Baixo\n");
 
-// Loop FOR para mover duas casas para baixo
-// Usamos FOR porque sabemos exatamente quantas casas serão percorridas
-for(int i = 0; i < casasBaixo; i++) {
-    printf("Baixo\n");
+        if(i == casasBaixo - 1) {
+            int contador = 0;
 
-    // Loop WHILE aninhado
-    // Quando terminar de descer as duas casas,
-    // executa o movimento para a esquerda
-    if(i == casasBaixo - 1) {
-
-        int contador = 0;
-
-        while(contador < casasEsquerda) {
-            printf("Esquerda\n");
-            contador++;
+            while(contador < casasEsquerda) {
+                printf("Esquerda\n");
+                contador++;
+            }
         }
-
     }
+
+    return 0;
 }
